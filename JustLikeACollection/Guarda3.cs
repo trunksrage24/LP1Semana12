@@ -2,10 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace MyEnumerable
+namespace JustLikeACollection
 {
     /// <summary>
-    /// Guarda3<T> must implement IEnumerable<T>
+    /// Guarda3<T> class: new method public void Add(T item)
+    /// Adds an item if there is space
+    /// Store item in the 1st variable that is different from the default value
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public class Guarda3<T> : IEnumerable<T>
@@ -53,6 +55,26 @@ namespace MyEnumerable
                     break;
                 default:
                     throw new IndexOutOfRangeException();
+            }
+        }
+
+        public void Add(T item)
+        {
+            if (EqualityComparer<T>.Default.Equals(item1, default(T)))
+            {
+                item1 = item;
+            }
+            else if (EqualityComparer<T>.Default.Equals(item2, default(T)))
+            {
+                item2 = item;
+            }
+            else if (EqualityComparer<T>.Default.Equals(item3, default(T)))
+            {
+                item3 = item;
+            }
+            else
+            {
+                throw new InvalidOperationException("No space available to add an item.");
             }
         }
 
