@@ -1,23 +1,26 @@
 using System;
 using System.Collections.Generic;
 
-/// <summary>
-/// class Checker, to return nr of enumerable items of a certain type
-/// </summary>
-public static class Checker
+namespace HowManyOfThisType
 {
-    /*HowManyOfType method, which returns nr of enumerable items of a 
-    certain type*/
-    public static int HowManyOfType<T>(ICollection<object> items)
+    /// <summary>
+    /// class Checker, to return nr of enumerable items of a certain type
+    /// </summary>
+    public static class Checker
     {
-        int count = 0;
-        foreach (var item in items)
+        /*HowManyOfType method, which returns nr of enumerable items of a 
+        certain type*/
+        public static int HowManyOfType<T>(ICollection<object> items)
         {
-            if (item is T)
+            int count = 0;
+            foreach (var item in items)
             {
-                count++;
+                if (item is T)
+                {
+                    count++;
+                }
             }
+            return count;
         }
-        return count;
     }
 }

@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace MyGenericClass
+namespace MyEnumerable
 {
     /// <summary>
     /// class Guarda3 which does: 

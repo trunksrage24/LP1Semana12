@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheyCameBefore", "TheyCameB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyGenericClass", "MyGenericClass\MyGenericClass.csproj", "{AAF64663-D696-4486-B44C-4D94C1B0A6AA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyEnumerable", "MyEnumerable\MyEnumerable.csproj", "{EA5ABCB4-0455-4F3D-8AC1-74738786E717}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{AAF64663-D696-4486-B44C-4D94C1B0A6AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AAF64663-D696-4486-B44C-4D94C1B0A6AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AAF64663-D696-4486-B44C-4D94C1B0A6AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA5ABCB4-0455-4F3D-8AC1-74738786E717}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA5ABCB4-0455-4F3D-8AC1-74738786E717}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA5ABCB4-0455-4F3D-8AC1-74738786E717}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA5ABCB4-0455-4F3D-8AC1-74738786E717}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -1,16 +1,25 @@
 using System;
 using System.Collections.Generic;
 
-public static class BeforeUtils
+namespace TheyCameBefore
 {
-    public static IEnumerable<T> GetTheOnesBefore<T>(IEnumerable<T> items, T separateItem)
-        where T : IComparable<T>
+    /// <summary>
+    /// class BeforeUtils that receives an enumerable of items and implements 
+    /// IComparable<T>, then receives another item and returns an enumerable 
+    /// containing the items in the original enumerable that, for sorting 
+    /// purposes, appear before the item passed apart
+    /// </summary>
+    public static class BeforeUtils
     {
-        foreach (T item in items)
+        public static IEnumerable<T> GetTheOnesBefore<T>(IEnumerable<T> items, T separateItem)
+            where T : IComparable<T>
         {
-            if (item.CompareTo(separateItem) < 0)
+            foreach (T item in items)
             {
-                yield return item;
+                if (item.CompareTo(separateItem) < 0)
+                {
+                    yield return item;
+                }
             }
         }
     }
