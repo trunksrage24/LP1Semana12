@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace MyEnumerable
@@ -12,7 +13,7 @@ namespace MyEnumerable
     /// If i < 0 or i > 2 throw new IndexOutOfRangeException();
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class Guarda3<T>
+    public class Guarda3<T> : IEnumerable<T>
     {
         private T item1;
         private T item2;
@@ -25,8 +26,6 @@ namespace MyEnumerable
             item3 = default(T);
         }
 
-        //GetItem method selects with item to choose wether i = 0, 1, 2 or 
-        //something else
         public T GetItem(int i)
         {
             if (i < 0 || i > 2)
@@ -41,8 +40,6 @@ namespace MyEnumerable
             };
         }
 
-        //SetItem method, which determines the outcome wether i = 0, 1, 2 or 
-        //something else
         public void SetItem(int i, T item)
         {
             if (i < 0 || i > 2)
@@ -62,6 +59,18 @@ namespace MyEnumerable
                 default:
                     throw new IndexOutOfRangeException();
             }
+        }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            yield return item1;
+            yield return item2;
+            yield return item3;
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
         }
     }
 }
