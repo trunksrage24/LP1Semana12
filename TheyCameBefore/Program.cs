@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace TheyCameBefore
 {
+    /// <summary>
+    /// class Program where the main method runs
+    /// </summary>
     public class Program
     {
         private static void Main()
