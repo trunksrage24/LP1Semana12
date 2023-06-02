@@ -2,6 +2,10 @@
 
 namespace MyGenericClass
 {
+    /// <summary>
+    /// class Program where the Main method is declared and implemented 
+    /// based on Guarda3 class
+    /// </summary>
     public class Program
     {
         private static void Main()

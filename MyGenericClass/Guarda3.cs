@@ -1,6 +1,15 @@
 using System;
 using System.Collections.Generic;
 
+/// <summary>
+/// class Guarda3 which does: 
+/// Three private instance variables of type T; 
+/// Empty constructor initializes 3 vars. → default value; 
+/// Public method T GetItem(int i); 
+/// Method public void SetItem(int i , T item); 
+/// If i < 0 or i > 2 throw new IndexOutOfRangeException();
+/// </summary>
+/// <typeparam name="T"></typeparam>
 public class Guarda3 <T>
 {
     private T item1;
@@ -14,6 +23,8 @@ public class Guarda3 <T>
         item3 = default(T);
     }
 
+    //GetItem method selects with item to choose wether i = 0, 1, 2 or 
+    //something else
     public T GetItem(int i)
     {
         if (i < 0 || i > 2)
@@ -28,6 +39,8 @@ public class Guarda3 <T>
         };
     }
 
+    //SetItem method, which determines the outcome wether i = 0, 1, 2 or 
+    //something else
     public void SetItem(int i, T item)
     {
         if (i < 0 || i > 2)
